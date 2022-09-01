@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[french]{babel}
+\usepackage{tabularx}
+\usepackage{lipsum}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\lstset{
+    language=C++,
+    basicstyle=\tt,
+    frame=tb,
+    keywordstyle=\color{blue}\bfseries,
+    }
+
+
+\hypersetup{
+        colorlinks,
+        linkcolor={red!50!black},
+        citecolor={blue!50!black},
+        urlcolor={blue!80!black}
+}
+
+\begin{document}
+
+\listoffigures
+\listoftables
+\lstlistoflistings
+
+\section{Extrait de code}
+
+\begin{lstlisting}[caption={My Caption},captionpos=b]
+#include <stdio.h>
+
+int main(void)
+{
+    for (int i = 0; i < 10; i++)
+        printf("Hello, world!");
+    return 42;
+}
+\end{lstlisting}
+
+\section{Tableaux}
+
+\begin{table}[h]
+\centering
+    \caption{Tableau 1 \label{tb:tableau1}}
+    \begin{tabular}{|lp{5cm}|r||}\hline
+        Id & Name & Age \\
+        \hline\hline
+        1 & John & 25 \\ \hline
+        2 & Mary & 23 \\ 
+        3 & Peter & 27 \\ \hline
+    \end{tabular}
+\end{table}    
+
+\begin{table}[h]
+    \centering
+        \caption{Tableau 1 \label{tb:tableau1}}
+        \begin{tabularx}{\textwidth}{lXr}
+            \toprule
+            Id & Name & Age \\
+            \midrule
+            1 & John & 25 \\ 
+            2 & Mary & 23 \\ 
+            3 & Peter & 27 \\ 
+            \bottomrule
+        \end{tabularx}
+    \end{table}    
+\lipsum[1-2]
+
+\section{Tableaux avancés}
+
+
+\begin{table}[h]
+    \centering
+    \caption{Tableau avancé}
+    \begin{tabular}{lclll}
+    \hline
+    \multicolumn{1}{|l|}{1} & \multicolumn{1}{c|}{2} & \multicolumn{1}{l|}{\textbf{3}} & \multicolumn{1}{l|}{4} & \multicolumn{1}{l|}{5}     \\ \hline
+                            & 7                      & \textbf{8}                      & 9                      & 10                         \\
+    \multirow{-2}{*}{6}     & 12                     & \textbf{13}                     & 14                     & \cellcolor[HTML]{FE0000}15 \\
+    \multicolumn{2}{l}{16}                           & \textbf{18}                     & 19                     & 20                        
+    \end{tabular}
+    \end{table}
+\end{document}

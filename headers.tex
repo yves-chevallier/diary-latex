@@ -1,0 +1,39 @@
+\documentclass[a4paper,twoside,12pt]{article}
+\usepackage[french]{babel}
+\usepackage{lipsum}
+\usepackage{fancyhdr}
+\usepackage{lastpage} % pour avoir le nombre de pages
+
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[RO,LE]{\textbf{The performance of new graduates}}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{page \thepage~sur~\pageref{LastPage}}
+\fancyfoot[LO,CE]{From: K. Grant}
+\fancyfoot[CO,RE]{To: Dean A. Smith}
+
+\renewcommand{\headrulewidth}{2ex}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\footruleskip}{1cm}
+
+\title{En-têtes et Pieds de pages}
+\author{Yves Chevallier}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Extrait de code}
+\subsection{Extrait de code}
+
+\begin{enumerate}
+    \item First
+    \item Second
+\end{enumerate}
+
+\lipsum[1-6]
+
+\section{Autre}
+
+\lipsum[6-12]
+\end{document}

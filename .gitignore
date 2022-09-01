@@ -1,0 +1,14 @@
+*.log
+*.lof 
+*.pytxcode
+*.gz
+*.dvi
+*.aux
+*.fls
+*.lol
+*.out
+*.lot 
+*.fdb_latexmk
+*.bbl
+*.bcf
+*.run.xml
